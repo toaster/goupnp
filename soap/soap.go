@@ -183,7 +183,7 @@ type soapBody struct {
 }
 
 type SOAPFaultDetail struct {
-	Raw string `xml:",innerxml"`
+	Raw []byte `xml:",innerxml"`
 }
 
 // SOAPFaultError implements error, and contains SOAP fault information.

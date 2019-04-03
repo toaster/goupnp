@@ -182,11 +182,15 @@ type soapBody struct {
 	RawAction []byte          `xml:",innerxml"`
 }
 
+type SOAPFaultDetail struct {
+	Raw string `xml:",innerxml"`
+}
+
 // SOAPFaultError implements error, and contains SOAP fault information.
 type SOAPFaultError struct {
 	FaultCode   string `xml:"faultcode"`
 	FaultString string `xml:"faultstring"`
-	Detail      string `xml:"detail"`
+	Detail      SOAPFaultDetail `xml:"detail"`
 }
 
 func (err *SOAPFaultError) Error() string {

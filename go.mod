@@ -1,4 +1,4 @@
-module github.com/huin/goupnp
+module github.com/toaster/goupnp
 
 require (
 	github.com/huin/goutil v0.0.0-20170803182201-1ca381bf3150
